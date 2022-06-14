@@ -1,4 +1,4 @@
-// Copyright © 2017-2020 Trust Wallet.
+// Copyright © 2017-2022 Trust Wallet.
 //
 // This file is part of Trust. The full Trust copyright notice, including
 // terms governing use, modification, and redistribution, is contained in the
@@ -23,6 +23,7 @@ struct TWAES {
 /// \param key encryption key, must be 16, 24, or 32 bytes long.
 /// \param data data to encrypt.
 /// \param iv initialization vector.
+/// \param mode padding mode.
 TW_EXPORT_STATIC_METHOD
 TWData *_Nullable TWAESEncryptCBC(TWData *_Nonnull key, TWData *_Nonnull data, TWData *_Nonnull iv, enum TWAESPaddingMode mode);
 
@@ -31,6 +32,7 @@ TWData *_Nullable TWAESEncryptCBC(TWData *_Nonnull key, TWData *_Nonnull data, T
 /// \param key decryption key, must be 16, 24, or 32 bytes long.
 /// \param data data to decrypt.
 /// \param iv initialization vector.
+/// \param mode padding mode.
 TW_EXPORT_STATIC_METHOD
 TWData *_Nullable TWAESDecryptCBC(TWData *_Nonnull key, TWData *_Nonnull data, TWData *_Nonnull iv, enum TWAESPaddingMode mode);
 
